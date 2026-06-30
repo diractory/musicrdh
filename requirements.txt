@@ -13,3 +13,4 @@ python-dotenv
 Pillow
 motor
 pymongo
+core
