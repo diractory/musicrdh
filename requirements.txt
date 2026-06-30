@@ -1,41 +1,15 @@
-# ╔══════════════════════════════════════════════════════════════╗
-# ║         🎵 XIVASUDEV MUSIC BOT — REQUIREMENTS 🎵            ║
-# ╚══════════════════════════════════════════════════════════════╝
-
-# ── Telegram Framework ────────────────────────────────────────────────────────
-pyrogram==2.0.106
-TgCrypto==1.2.5
-
-# ── Voice Chat Streaming ─────────────────────────────────────────────────────
-py-tgcalls==2.1.0
-
-# ── YouTube / Audio Downloading ──────────────────────────────────────────────
-yt-dlp>=2024.1.0
-youtube-search-python==1.6.6
-
-# ── Audio Processing ─────────────────────────────────────────────────────────
-# ffmpeg must also be installed on the system:
-#   Ubuntu/Debian: sudo apt install ffmpeg -y
-#   Render:        added automatically via render.yaml buildCommand
-
-# ── Web Framework (keep-alive server) ────────────────────────────────────────
-Flask==3.0.3
-Werkzeug==3.0.3
-
-# ── HTTP client (self-ping loop) ─────────────────────────────────────────────
-requests==2.32.3
-
-# ── Async Utilities ──────────────────────────────────────────────────────────
-aiohttp==3.9.5
-aiofiles==23.2.1
-
-# ── Spotify Support (optional) ───────────────────────────────────────────────
-spotipy==2.23.0
-
-# ── Environment Variables ────────────────────────────────────────────────────
-python-dotenv==1.0.1
-
-# ── Utilities ────────────────────────────────────────────────────────────────
-Pillow==10.3.0
-motor==3.4.0
-pymongo==4.7.2
+pyrogram
+TgCrypto
+py-tgcalls
+yt-dlp
+youtube-search-python
+Flask
+Werkzeug
+requests
+aiohttp
+aiofiles
+spotipy
+python-dotenv
+Pillow
+motor
+pymongo
