@@ -1,0 +1,51 @@
+# ╔══════════════════════════════════════════════════════════════╗
+# ║               render.yaml — Deploy to Render.com            ║
+# ║   Free Web Service — Python — Bot stays alive via self-ping ║
+# ╚══════════════════════════════════════════════════════════════╝
+
+services:
+  - type: web
+    name: xivasudev-musicbot
+    runtime: python
+    region: singapore    # closest to India — lowest latency for you
+    plan: free
+
+    # Install system dependencies (ffmpeg required for audio processing)
+    buildCommand: |
+      apt-get update && apt-get install -y ffmpeg git curl &&
+      pip install --upgrade pip &&
+      pip install -r requirements.txt
+
+    startCommand: python3 main.py
+
+    # Health check — Render uses this to know if your app is running
+    healthCheckPath: /health
+
+    envVars:
+      - key: API_ID
+        value: "38165687"
+      - key: API_HASH
+        value: "1d6adcf8aed67d7f981d8e6089030158"
+      - key: BOT_TOKEN
+        value: "8852307164:AAHB1My-Q3KKzPDl2Dr44LoUStXhHJkNqXw"
+      - key: SUDOERS
+        value: "8192070400"
+      - key: FORCE_JOIN_CHANNEL
+        value: "@xivasudev"
+      - key: QUALITY
+        value: "high"
+      - key: STREAM_MODE
+        value: "audio"
+      - key: PREFIX
+        value: "! /"
+      - key: LANGUAGE
+        value: "en"
+      - key: ADMINS_ONLY
+        value: "False"
+      - key: MAX_QUEUE_SIZE
+        value: "20"
+      - key: PORT
+        value: "8080"
+      # ── ADD THESE MANUALLY in Render Dashboard (secret values) ──────────────
+      # SESSION          → your Pyrogram string session  (run python3 genStr.py)
+      # RENDER_APP_URL   → https://xivasudev-musicbot.onrender.com  (your app URL)
