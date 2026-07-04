@@ -1,0 +1,6 @@
+telethon==1.36.0
+python-dotenv==1.0.1
+flask==3.0.3
+py-tgcalls==2.2.10
+tgcrypto==1.2.5
+cryptg==0.4.0

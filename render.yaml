@@ -1,0 +1,22 @@
+services:
+  - type: web
+    name: radhey-music-bot
+    env: docker
+    plan: free
+    envVars:
+      - key: API_ID
+        sync: false
+      - key: API_HASH
+        sync: false
+      - key: BOT_TOKEN
+        sync: false
+      - key: SESSION_STRING
+        sync: false
+      - key: OWNER_ID
+        sync: false
+      - key: SUDOERS
+        sync: false
+      - key: FORCE_SUB_CHANNELS
+        value: "sunradhey xivasudev"
+      - key: PORT
+        value: "8080"
