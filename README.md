@@ -63,3 +63,4 @@ python bot.py
 ## Notes
 - Instagram downloads depend on `yt-dlp`'s current Instagram support; some private/age-restricted content may fail.
 - Downloaded files are deleted from disk immediately after being sent.
+<!-- hacktoberfest update 20260709152357188573 -->
